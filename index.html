@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Message</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <main class="page">
+    <section class="card">
+      <div class="card-top">
+        <div class="tag">A little gift box just for the one I secretly adore</div>
+        <h1>My Heartfelt Message</h1>
+        <p class="subtitle">
+          Every click is a roll that brings a random message from me. Some are gentle, some are a little playful, but
+          all of them are sweet.
+        </p>
+      </div>
+
+      <div class="card-body">
+        <div class="left-panel">
+          <div class="pill-wrap">
+            <div class="pill">
+              <span>💌</span>
+              <span id="messageCount">0 messages</span>
+            </div>
+
+            <div class="pill">
+              <span>⭐</span>
+              <span>10 rarity levels</span>
+            </div>
+          </div>
+
+          <h2>Roll for you</h2>
+          <p class="desc">
+            Each message is divided into 10 different rarity levels, each appearing with its own probability. But the
+            probability of missing you doesn’t exist, because I am always thinking of you.
+          </p>
+
+          <div class="actions">
+            <button id="openBtn" class="btn primary">Roll</button>
+            <button id="hideBtn" class="btn secondary">Hide Result</button>
+          </div>
+
+          <div class="mini-note">
+            Contraindicated if there are people <strong>watching</strong> around.
+          </div>
+
+          <div class="rarity-legend" id="rarityLegend"></div>
+        </div>
+
+        <div class="right-panel">
+          <div class="roulette-area">
+            <div class="roulette-head">
+              <div class="roulette-title">Message Roll</div>
+              <div class="roulette-status" id="rouletteStatus">Ready to roll and receive a message.</div>
+            </div>
+
+            <div class="actions actions-mobile">
+              <button class="btn primary mobile-roll-btn" data-action="roll">Roll</button>
+              <button class="btn secondary mobile-hide-btn" data-action="hide">Hide Result</button>
+            </div>
+
+            <div class="roulette-shell">
+              <div class="center-marker"></div>
+              <div class="marker-glow"></div>
+
+              <div class="roulette-viewport" id="rouletteViewport">
+                <div class="roulette-track" id="rouletteTrack"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="message-card" id="messageCard">
+            <div class="message-header">
+              <span id="resultBadge" class="result-badge">Roll Result</span>
+              <span class="heart-icon">✦</span>
+            </div>
+
+            <div class="burst" id="burst"></div>
+
+            <div id="placeholder" class="placeholder active">
+              <div class="placeholder-heart">🎁</div>
+              <p>
+                Press the roll button to reveal a special message for my loved one.
+              </p>
+            </div>
+
+            <div id="messageBox" class="message-box">
+              <div class="rarity-name" id="rarityName"></div>
+              <div class="rarity-desc" id="rarityDesc"></div>
+              <p class="message-text" id="messageText"></p>
+              <div class="message-sign">— from the one who always misses you</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
