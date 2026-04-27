@@ -30,11 +30,11 @@
             description: "Open enough safe cells without hitting a mine.",
             url: "games/minesweeper/index.html"
         },
-        {
-            name: "Who Wants To Be A Millionaire",
-            description: "Answer enough questions correctly to win.",
-            url: "games/millionaire/index.html"
-        },
+        // {
+        //     name: "Who Wants To Be A Millionaire",
+        //     description: "Answer enough questions correctly to win.",
+        //     url: "games/millionaire/index.html"
+        // },
         // {
         //     name: "Tetris",
         //     description: "Reach the target score to win.",
