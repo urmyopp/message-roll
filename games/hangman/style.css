@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef6ff;
+    color: #24528f;
+}
+
+.game-page {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+p {
+    margin: 0 0 14px;
+    color: #6d7d96;
+}
+
+.question-box {
+    max-width: 620px;
+    margin: 16px auto;
+    padding: 16px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 16px 34px rgba(80, 140, 210, 0.12);
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6fa8ff;
+    margin-bottom: 8px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.word-box {
+    max-width: 620px;
+    margin: 16px auto;
+    padding: 18px;
+    border-radius: 18px;
+    background: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    line-height: 1.8;
+    color: #24528f;
+    word-break: break-word;
+}
+
+.status-row {
+    max-width: 620px;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.status-row div {
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: white;
+    color: #6d7d96;
+    font-weight: 700;
+}
+
+.status-row strong {
+    color: #24528f;
+}
+
+.letters {
+    max-width: 620px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.letters button {
+    height: 42px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    background: white;
+    color: #24528f;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.letters button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.letters button.correct {
+    background: #e8fff1;
+    color: #237447;
+}
+
+.letters button.wrong {
+    background: #fff0f3;
+    color: #b8465b;
+}
+
+.note {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+@media (max-width: 520px) {
+    .letters {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .word-box {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+}

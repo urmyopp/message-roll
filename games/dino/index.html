@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Run</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="game-page">
+    <h1>Dino Run</h1>
+    <p>Survive until 300 points to win. Press Space, W, Arrow Up, or tap Jump.</p>
+
+    <div class="score-box">
+      <span>Score</span>
+      <strong><span id="score">0</span> / 300</strong>
+    </div>
+
+    <div class="game-wrap">
+      <canvas id="board" width="640" height="260"></canvas>
+
+      <!-- Màn hình bắt đầu -->
+      <div id="startScreen" class="start-screen">
+        <div class="start-card">
+          <h2>Dino Run</h2>
+          <p>Help the little dino survive as long as possible!<br>Avoid the cacti!</p>
+          <button id="startBtn">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-actions">
+      <button id="jumpBtn">Jump</button>
+    </div>
+
+    <p class="note">Avoid the cactus. The game gets slightly faster over time.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

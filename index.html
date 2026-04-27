@@ -11,9 +11,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="games/games.css" />
 </head>
 
 <body>
+  <div class="lock-screen" id="lockScreen">
+    <div class="lock-card">
+      <div class="lock-icon">🔐</div>
+      <h2>Private Gift Box</h2>
+      <p>Enter the 6-digit password to unlock.</p>
+
+      <div class="lock-hint">
+        Hint: The first day we met — format <strong>DDMMYY</strong>
+      </div>
+
+      <input id="passwordInput" class="password-input" type="password" inputmode="numeric" maxlength="6"
+        placeholder="••••••" autocomplete="off" />
+
+      <button id="unlockBtn" class="unlock-btn">Unlock</button>
+
+      <div id="lockError" class="lock-error"></div>
+    </div>
+  </div>
+
   <div class="hearts" id="hearts"></div>
 
   <main class="page">
@@ -47,8 +67,10 @@
             probability of missing you doesn’t exist, because I am always thinking of you.
           </p>
 
+
           <div class="actions">
             <button id="openBtn" class="btn primary">Roll</button>
+            <button id="playGameBtn" class="btn secondary">Play Game</button>
             <button id="hideBtn" class="btn secondary">Hide Result</button>
           </div>
 
@@ -63,11 +85,18 @@
           <div class="roulette-area">
             <div class="roulette-head">
               <div class="roulette-title">Message Roll</div>
-              <div class="roulette-status" id="rouletteStatus">Ready to roll and receive a message.</div>
+              <div class="roulette-status" id="rouletteStatus">Ready to roll and receive a sweet message ✨</div>
+            </div>
+
+            <div class="bonus-card" id="bonusCard">
+              <div class="bonus-label">Active Game Bonus</div>
+              <div class="bonus-value" id="bonusValue">No active bonus</div>
+              <div class="bonus-note">This bonus will be consumed after your next roll.</div>
             </div>
 
             <div class="actions actions-mobile">
               <button class="btn primary mobile-roll-btn" data-action="roll">Roll</button>
+              <button class="btn secondary mobile-game-btn" data-action="game">Play Game</button>
               <button class="btn secondary mobile-hide-btn" data-action="hide">Hide Result</button>
             </div>
 
@@ -99,7 +128,14 @@
             <div id="messageBox" class="message-box">
               <div class="rarity-name" id="rarityName"></div>
               <div class="rarity-desc" id="rarityDesc"></div>
+
+              <figure class="quote-box" id="quoteBox" hidden>
+                <blockquote id="quoteText"></blockquote>
+                <figcaption id="quoteSource"></figcaption>
+              </figure>
+
               <p class="message-text" id="messageText"></p>
+
               <div class="message-sign">— from the one who always misses you</div>
             </div>
           </div>
@@ -107,6 +143,26 @@
       </div>
     </section>
   </main>
+
+  <div class="game-modal" id="gameModal">
+    <div class="game-panel">
+      <div class="game-header">
+        <div>
+          <div class="game-kicker">Mini Game</div>
+          <h2 id="gameTitle">Random Game</h2>
+          <p id="gameDescription">Win the game to earn a temporary rarity bonus.</p>
+        </div>
+
+        <button class="game-close" id="closeGameBtn">×</button>
+      </div>
+
+      <div class="game-result" id="gameResult"></div>
+
+      <iframe id="gameFrame" class="game-frame" title="Mini Game" src=""></iframe>
+    </div>
+  </div>
+
+  <script src="games/game-manager.js"></script>
 
   <script src="script.js"></script>
 </body>

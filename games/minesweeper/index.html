@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-page">
+    <h1>Minesweeper</h1>
+    <p>Clear all mines to win.</p>
+
+    <div class="score-box">
+        <span>Mines Left</span>
+        <strong><span id="safeCount">8</span></strong>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="mobile-flag-tools">
+        <button id="flagModeBtn" type="button">Flag Mode: Off</button>
+    </div>
+
+    <p class="note">Right-click to place a flag. On mobile, turn on Flag Mode before tapping a cell.</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

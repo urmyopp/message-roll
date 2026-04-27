@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TETRIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tetris-container">
+        <div class="game-header">
+            <h1>TETRIS</h1>
+            <div class="stats">
+                <div>Score: <span id="score">0</span></div>
+                <div>Level: <span id="level">1</span></div>
+                <div>Lines: <span id="lines">0</span></div>
+            </div>
+        </div>
+
+        <div class="start-wrapper">
+            <button id="start-btn" class="start-btn">START GAME</button>
+        </div>
+
+        <div class="game-body">
+            <div class="board-wrapper">
+                <canvas id="tetris" width="240" height="480"></canvas>
+            </div>
+
+            <div class="side-panel">
+                <div class="next-box">
+                    <p>NEXT</p>
+                    <canvas id="next" width="88" height="88"></canvas>
+                </div>
+
+                <div class="controls">
+                    <button id="pause-btn">PAUSE</button>
+                    <button id="restart-btn">RESTART</button>
+                </div>
+
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+
+        <!-- Hướng dẫn điều khiển ngắn gọn -->
+        <div class="controls-hint">
+            ← → : Move  ↓ : Soft Drop  ↑ / Space : Rotate
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

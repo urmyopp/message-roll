@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef6ff;
+    color: #24528f;
+}
+
+.game-page {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+p {
+    margin: 0 0 14px;
+    color: #6d7d96;
+}
+
+.score-box {
+    width: fit-content;
+    margin: 0 auto 14px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.score-box span {
+    color: #6d7d96;
+    font-weight: 700;
+}
+
+.score-box strong span,
+.score-box strong {
+    color: #24528f;
+}
+
+.game-wrap {
+    position: relative;
+    width: min(400px, 100%);
+    margin: 0 auto;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 16px 34px rgba(80, 140, 210, 0.14);
+}
+
+.start-screen {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: rgba(238, 246, 255, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.start-screen.hidden {
+    display: none;
+}
+
+.start-card {
+    background: white;
+    padding: 24px 22px;
+    border-radius: 20px;
+    max-width: 300px;
+    box-shadow: 0 16px 34px rgba(80, 140, 210, 0.18);
+}
+
+.start-card h2 {
+    margin: 0 0 10px;
+    color: #24528f;
+}
+
+.start-card p {
+    margin-bottom: 18px;
+    line-height: 1.45;
+}
+
+.start-card button {
+    border: 0;
+    border-radius: 999px;
+    background: #24528f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.start-card button:hover {
+    opacity: 0.9;
+}
+
+.mobile-controls {
+    display: none;
+    margin-top: 16px;
+}
+
+.mobile-controls button {
+    width: 54px;
+    height: 44px;
+    margin: 4px;
+    border: 0;
+    border-radius: 14px;
+    background: white;
+    color: #24528f;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.note {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .mobile-controls {
+        display: block;
+    }
+}

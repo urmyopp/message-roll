@@ -957,3 +957,243 @@ body {
         font-size: 16px;
     }
 }
+
+.lock-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 245, 250, 0.62),
+        rgba(235, 246, 255, 0.58) 50%,
+        rgba(255, 240, 248, 0.62)
+    );
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.lock-screen.unlocked {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.45s ease;
+}
+
+.lock-card {
+    width: min(420px, 100%);
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 28px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.lock-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.lock-card h2 {
+    margin: 0 0 10px;
+    color: var(--blue-dark);
+    font-size: 28px;
+}
+
+.lock-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.lock-hint {
+    margin: 18px 0;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: var(--blue-soft);
+    color: var(--blue-dark);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.password-input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    border: 1px solid #d5e6ff;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--blue-dark);
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.password-input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(111, 168, 255, 0.16);
+}
+
+.unlock-btn {
+    width: 100%;
+    margin-top: 14px;
+    border: none;
+    border-radius: 18px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    background: linear-gradient(180deg, #86b8ff, #6fa8ff);
+    color: white;
+    box-shadow: 0 18px 36px rgba(111, 168, 255, 0.25);
+}
+
+.lock-error {
+    min-height: 22px;
+    margin-top: 12px;
+    color: #e45b73;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bonus-card {
+    display: none;
+    margin: 14px 0 16px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(232, 255, 241, 0.96), rgba(238, 246, 255, 0.96));
+    border: 1px solid rgba(111, 168, 255, 0.3);
+    box-shadow: 0 14px 30px rgba(80, 140, 210, 0.14);
+}
+
+.bonus-card.active {
+    display: block;
+}
+
+.bonus-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #237447;
+    margin-bottom: 5px;
+}
+
+.bonus-value {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--blue-dark);
+    line-height: 1.35;
+}
+
+.bonus-note {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .bonus-card {
+        order: 3;
+        margin: 12px 0 16px;
+    }
+
+    .left-panel .actions {
+        order: 4;
+    }
+
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.quote-box {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 18px 20px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(238, 246, 255, 0.92), rgba(255, 255, 255, 0.86));
+    border: 1px solid #d8e9ff;
+    box-shadow: 0 12px 28px rgba(111, 168, 255, 0.1);
+    position: relative;
+}
+
+.quote-box::before {
+    content: "“";
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    font-size: 56px;
+    line-height: 1;
+    color: rgba(111, 168, 255, 0.22);
+    font-weight: 800;
+}
+
+.quote-box blockquote {
+    margin: 0;
+    color: #52617d;
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.75;
+    font-weight: 500;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-box figcaption {
+    margin-top: 10px;
+    text-align: right;
+    color: var(--blue-dark);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.message-text {
+    margin: 0;
+    font-size: clamp(20px, 2.7vw, 28px);
+    line-height: 1.75;
+    color: var(--text);
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+}
+
+@media (max-width: 560px) {
+    .quote-box {
+        padding: 15px 16px;
+        border-radius: 18px;
+        margin-bottom: 14px;
+    }
+
+    .quote-box::before {
+        font-size: 44px;
+        top: -8px;
+        left: 12px;
+    }
+
+    .quote-box blockquote {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .quote-box figcaption {
+        font-size: 12px;
+    }
+
+    .message-text {
+        font-size: 18px;
+        line-height: 1.75;
+    }
+}

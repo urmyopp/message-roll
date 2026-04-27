@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Judy Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-page">
+    <!-- <h1>Judy Game</h1> -->
+    <p>Use arrow keys or WASD.</p>
+
+    <div class="score-box">
+      <span>Score</span>
+      <strong><span id="score">0</span> / 9</strong>
+    </div>
+
+    <div class="game-wrap">
+      <canvas id="board" width="400" height="400"></canvas>
+
+      <div id="startScreen" class="start-screen">
+        <div class="start-card">
+          <p>Control Nick Wilde, reach Judy Hopps, and collect all letters to win.</p>
+          <button id="startBtn">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-controls">
+      <button data-dir="up">↑</button>
+      <div>
+        <button data-dir="left">←</button>
+        <button data-dir="down">↓</button>
+        <button data-dir="right">→</button>
+      </div>
+    </div>
+
+    <p class="note">Do not hit the wall or yourself.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

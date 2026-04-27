@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-page">
+    <!-- <h1>2048</h1> -->
+    <p>Reach the 128 tile to win. Use arrow keys or WASD.</p>
+
+    <div class="score-box">
+      <span>Highest Tile</span>
+      <strong><span id="highestTile">0</span> / 128</strong>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="mobile-controls">
+      <button data-move="up">↑</button>
+      <div>
+        <button data-move="left">←</button>
+        <button data-move="down">↓</button>
+        <button data-move="right">→</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

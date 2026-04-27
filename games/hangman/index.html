@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-page">
+    <!-- <h1>Hangman</h1>
+    <p>Guess the answer before making 6 mistakes.</p> -->
+
+    <div class="question-box">
+      <div class="label">Question</div>
+      <div id="question" class="question"></div>
+    </div>
+
+    <div class="word-box" id="wordBox"></div>
+
+    <div class="status-row">
+      <div>Mistakes: <strong><span id="mistakes">0</span> / 6</strong></div>
+      <div>Correct letters: <strong><span id="correctCount">0</span></strong></div>
+    </div>
+
+    <div class="letters" id="letters"></div>
+
+    <p class="note">Letters only. Spaces and punctuation are revealed automatically.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

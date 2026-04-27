@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Who Wants To Be A Millionaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="top-bar">
+            <div>
+                <h1>Millionaire Quiz</h1>
+                <p>Answer 10 random questions to win</p>
+            </div>
+
+            <div class="prize-box">
+                <span>Current Prize</span>
+                <strong id="current-prize">0 VND</strong>
+            </div>
+        </div>
+
+        <div class="main-game">
+            <div class="progress">
+                Question <span id="question-num">1</span> / 10
+            </div>
+
+            <div class="question-card">
+                <div id="question" class="question">Question will appear here</div>
+            </div>
+
+            <div id="answers" class="answers"></div>
+
+            <div id="status" class="status"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
