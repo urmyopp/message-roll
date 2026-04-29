@@ -10,12 +10,28 @@ let oneRollBonus = null;
 function getPoolsWithBonus() {
     if (!oneRollBonus) return rarityPools;
 
-    return rarityPools.map(pool => ({
-        ...pool,
-        chance: pool.level === oneRollBonus.level
-            ? pool.chance * 2   // nhân đôi xác suất thay vì cộng thêm %
-            : pool.chance
-    }));
+    // Tạo bản sao và áp dụng bonus
+    let modifiedPools = rarityPools.map(pool => {
+        if (pool.level === oneRollBonus.level) {
+            const newChance = Math.min(100, Math.round(pool.chance * oneRollBonus.multiplier));
+            return { ...pool, chance: newChance };
+        }
+        return { ...pool };
+    });
+
+    // Tính tổng chance sau bonus
+    const total = modifiedPools.reduce((sum, p) => sum + p.chance, 0);
+
+    // Nếu tổng > 100%, ta scale tất cả xuống để tổng = 100%
+    if (total > 100) {
+        const scale = 100 / total;
+        modifiedPools = modifiedPools.map(pool => ({
+            ...pool,
+            chance: Math.round(pool.chance * scale * 100) / 100   // giữ 2 chữ số thập phân
+        }));
+    }
+
+    return modifiedPools;
 }
 
 function consumeRollBonus() {
@@ -211,7 +227,7 @@ const rarityPools = [
         shortName: "Extremely Rare",
         fullLabel: "you",
         description: "The rarest messages — vulnerable, honest, and meant for moments when both sides are ready to be real.",
-        chance: 0.05,
+        chance: 0.5,
         messages: [
             "Mình đã chuẩn bị sẵn sàng cả rồi, chỉ chờ đến thời điểm thích hợp thì mình muốn gặp em để 'hợp thức hóa' mối quan hệ của tụi mình thôi.",
             "Tự nhiên lại gặp cô này ở thời điểm bản thân chưa có gì trong tay hết, thật sự đáng trách. Xin lỗi yêu dấu của mình nhé.",

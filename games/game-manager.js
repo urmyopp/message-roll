@@ -86,23 +86,38 @@
         clearResult();
     }
 
+    function randomMultiplier() {
+        return Math.floor(Math.random() * 9) + 2; // random từ 2 đến 10
+    }
+
     function handleWin() {
         if (gameFinished) return;
         gameFinished = true;
 
-        const level = randomLevel();
-        // Lấy xác suất gốc từ rarityPools
+        const level = Math.floor(Math.random() * 10) + 1;        // random level 1-10
+        const multiplier = Math.floor(Math.random() * 9) + 2;     // random x2 đến x10
+
         const pool = rarityPools.find(p => p.level === level);
+        const originalChance = pool ? pool.chance : 5;
+
+        // Tính bonusChance nhưng không cho vượt quá 100%
+        let bonusChance = Math.round(originalChance * multiplier * 100) / 100;
+        if (bonusChance > 100) {
+            bonusChance = 100;
+        }
+
         const reward = {
-            level,
-            amount: pool ? pool.chance : 0  // gửi chính xác giá trị % của level
+            level: level,
+            multiplier: multiplier,
+            originalChance: originalChance,
+            bonusChance: bonusChance
         };
 
         if (typeof window.applyGameReward === "function") {
             window.applyGameReward(reward);
         }
 
-        showResult("win", `You won! Bonus: Level ${level} chance doubled for your next roll.`);
+        showResult("win", `You won! Bonus: Level ${level} ×${multiplier} (${originalChance}% → ${bonusChance}%)`);
     }
 
     function handleLose() {
@@ -139,7 +154,15 @@
         }
 
         bonusCard.classList.add("active");
-        bonusValue.textContent = `Level ${reward.level} bonus chance doubled → ${reward.amount * 2}%`;
+        
+        const isCapped = reward.bonusChance >= 100;
+        
+        bonusValue.innerHTML = `
+            Level <strong>${reward.level}</strong> ×<strong>${reward.multiplier}</strong><br>
+            <small>${reward.originalChance}% → <strong>${reward.bonusChance}%</strong>
+            ${isCapped ? ' <span style="color:#d32f2f;">(capped at 100%)</span>' : ''}
+            </small>
+        `;
     };
 
     if (playBtn) playBtn.addEventListener("click", openRandomGame);
