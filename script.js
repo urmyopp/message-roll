@@ -200,7 +200,10 @@ const rarityPools = [
         messages: [
             "QB chắc là có ghen với nữ nhân, thế có ghen với nam nhân không nhỉ?",
             "QB thích mình lúc đứng đắn hay là không đứng đắn hơn?",
-            "Ngoài ôm ra thì còn những hành động 'thân mật' nào mà cô này thích không?"
+            "Ngoài ôm ra thì còn những hành động 'thân mật' nào mà cô này thích không?",
+            "Có người bảo quá trình đang nhanh quá, nên mình vẫn đợi. Đợi một ngày người ta cảm thấy phù hợp rồi thì mình liền xin danh phận.",
+            "Từ lúc quen biết đến hiện tại, có những hành động hay lời nhắn nào của HMie làm QB khó chịu hay không thích không? Cụ thể là?",
+            "Trong thang điểm 100, đối với QB thì HMie được bao nhiêu điểm? Hãy giải trình cụ thể cho từng điểm bằng tối thiểu 2 từ."
         ]
     },
     {
@@ -212,9 +215,7 @@ const rarityPools = [
         messages: [
             "Mình đã chuẩn bị sẵn sàng cả rồi, chỉ chờ đến thời điểm thích hợp thì mình muốn gặp em để 'hợp thức hóa' mối quan hệ của tụi mình thôi.",
             "Tự nhiên lại gặp cô này ở thời điểm bản thân chưa có gì trong tay hết, thật sự đáng trách. Xin lỗi yêu dấu của mình nhé.",
-            "Có người bảo quá trình đang nhanh quá, nên mình vẫn đợi. Đợi một ngày người ta cảm thấy phù hợp rồi thì mình liền xin danh phận.",
-            "Từ lúc quen biết đến hiện tại, có những hành động hay lời nhắn nào của HMie làm QB khó chịu hay không thích không? Cụ thể là?",
-            "Trong thang điểm 100, đối với QB thì HMie được bao nhiêu điểm? Hãy giải trình cụ thể cho từng điểm bằng tối thiểu 2 từ."
+            
         ]
     }
 ];
