@@ -99,14 +99,6 @@ const rarityPools = [
         chance: 30,
         messages: [
             {
-                type: "document",
-                title: "Gửi em",
-                filename: "khu-rung-den-toi.pdf",           // tên file thật
-                folder: "documents",              // thư mục chứa file
-                description: "Nếu rảnh thì em có thể đọc thử nhé. \nKhông biết gu người yêu lý tưởng của ẻm sẽ tuyệt vời như nào nhỉ.",
-                icon: "📄"                        // tuỳ chọn
-            },
-            {
                 quote: "Thật khó để nhận ra thế nào là tình yêu. Nhưng nhớ một người thì rõ lắm. Tôi nhớ anh ấy.  Thật sự rất nhớ anh ấy.",
                 source: "Đôi bạn học yêu",
                 text: "Mỗi người đều có một định nghĩa riêng cho mình về tình yêu. Nhưng nỗi nhớ thì không có bất kỳ định nghĩa cụ thể nào cả. Vậy mà ai cũng biết mình đang nhớ một người."
@@ -249,6 +241,14 @@ const rarityPools = [
         description: "The rarest messages — vulnerable, honest, and meant for moments when both sides are ready to be real.",
         chance: 0.5,
         messages: [
+            {
+                type: "document",
+                title: "Gửi em",
+                filename: "khu-rung-den-toi.pdf",           // tên file thật
+                folder: "documents",              // thư mục chứa file
+                description: "Nếu rảnh thì em có thể đọc thử nhé. \nKhông biết gu người yêu lý tưởng của ẻm sẽ tuyệt vời như nào nhỉ.",
+                icon: "📄"                        // tuỳ chọn
+            },
             "Mình là một người lắm mơ mộng. Mỗi lúc ngủ đều tạo trong đầu một kịch bản để bản thân có thể ngủ ngon hơn. Gần đây thì kịch bản nào cũng có sự đồng hành của Quí Bình.",
             "Mình đã chuẩn bị sẵn sàng cả rồi, chỉ chờ đến thời điểm thích hợp thì mình muốn gặp em để 'hợp thức hóa' mối quan hệ của tụi mình thôi.",
             "Tự nhiên lại gặp cô này ở thời điểm bản thân chưa có gì trong tay hết, thật sự đáng trách. Xin lỗi yêu dấu của mình nhé.",
