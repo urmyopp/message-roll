@@ -98,11 +98,6 @@ const rarityPools = [
         description: "Light and everyday messages — easy to send, easy to receive, and perfect for quietly showing care.",
         chance: 30,
         messages: [
-            {
-                quote: "Thật khó để nhận ra thế nào là tình yêu. Nhưng nhớ một người thì rõ lắm. Tôi nhớ anh ấy.  Thật sự rất nhớ anh ấy.",
-                source: "Đôi bạn học yêu",
-                text: "Mỗi người đều có một định nghĩa riêng cho mình về tình yêu. Nhưng nỗi nhớ thì không có bất kỳ định nghĩa cụ thể nào cả. Vậy mà ai cũng biết mình đang nhớ một người."
-            },
             "Chỉ muốn nhắc cô rằng hôm nay có một người vẫn đang nhớ cô.",
             "Chúc người đẹp một ngày làm việc thật 'đáng yêu' nhé, nhớ ăn uống đầy đủ nữa.",
             "Nụ cười của cô ngoan xinh yêu lắm, nhớ mỉm cười mỗi ngày nhé. Quên là mình phạt đấy."
