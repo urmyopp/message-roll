@@ -96,8 +96,21 @@ const rarityPools = [
         shortName: "Very Common",
         fullLabel: "A person",
         description: "Light and everyday messages — easy to send, easy to receive, and perfect for quietly showing care.",
-        chance: 40,
+        chance: 30,
         messages: [
+            {
+                type: "document",
+                title: "Gửi em",
+                filename: "khu-rung-den-toi.pdf",           // tên file thật
+                folder: "documents",              // thư mục chứa file
+                description: "Nếu rảnh thì em có thể đọc thử nhé. \nKhông biết gu người yêu lý tưởng của ẻm sẽ tuyệt vời như nào nhỉ.",
+                icon: "📄"                        // tuỳ chọn
+            },
+            {
+                quote: "Thật khó để nhận ra thế nào là tình yêu. Nhưng nhớ một người thì rõ lắm. Tôi nhớ anh ấy.  Thật sự rất nhớ anh ấy.",
+                source: "Đôi bạn học yêu",
+                text: "Mỗi người đều có một định nghĩa riêng cho mình về tình yêu. Nhưng nỗi nhớ thì không có bất kỳ định nghĩa cụ thể nào cả. Vậy mà ai cũng biết mình đang nhớ một người."
+            },
             "Chỉ muốn nhắc cô rằng hôm nay có một người vẫn đang nhớ cô.",
             "Chúc người đẹp một ngày làm việc thật 'đáng yêu' nhé, nhớ ăn uống đầy đủ nữa.",
             "Nụ cười của cô ngoan xinh yêu lắm, nhớ mỉm cười mỗi ngày nhé. Quên là mình phạt đấy."
@@ -108,7 +121,7 @@ const rarityPools = [
         shortName: "Common",
         fullLabel: "with",
         description: "Sweet and noticeable messages that already carry a little charm, attention, and quiet fondness.",
-        chance: 32,
+        chance: 25,
         messages: [
             "Biết là có người bận nhưng thỉnh thoảng cũng nói nhớ người ta một cái, người ta cũng biết chờ mong đấy.",
             "Cười một cái xem nào. Xinh yêu có thể chụp ảnh gửi mình để tích điểm cho 'hộp quà bí ẩn' nhé.",
@@ -178,6 +191,11 @@ const rarityPools = [
         chance: 3.5,
         messages: [
             {
+                quote: "Thật khó để nhận ra thế nào là tình yêu. Nhưng nhớ một người thì rõ lắm. Tôi nhớ anh ấy.  Thật sự rất nhớ anh ấy.",
+                source: "Đôi bạn học yêu",
+                text: "Mỗi người đều có một định nghĩa riêng cho mình về tình yêu. Nhưng nỗi nhớ thì không có bất kỳ định nghĩa cụ thể nào cả. Vậy mà ai cũng biết mình đang nhớ một người."
+            },
+            {
                 quote: "Có thể có hàng triệu bông hồng trên toàn thế giới, nhưng cậu là bông hồng duy nhất của tớ, bông hồng độc nhất vô nhị.",
                 source: "Hoàng tử bé",
                 text: "Những bông hồng khác có đẹp đến đâu cũng chỉ để thưởng thức rồi thôi, còn bông hồng mà mình dành trọn tâm tư chăm sóc mới là bông hồng quý giá nhất."
@@ -187,6 +205,7 @@ const rarityPools = [
                 source: "Hoàng tử bé",
                 text: "Mình lỡ có tình cảm hơi nhiều với Quí Bình rồi, Quí Bình chịu trách nhiệm đi nhé."
             },
+            "Chắc là khi có tình cảm, người ta thường hay nghĩ nhiều về viễn cảnh có sự hiện diện của mình và đối phương.",
             "Đôi khi cách thể hiện tình cảm của mỗi người mỗi khác nhau, nhưng mà toi nghĩ nếu không cảm nhận được thì tức là không có. Hy vọng cô này cảm nhận được tình cảm mà mình dành cho cổ.",
             "Mình dễ thích một người, nhưng sẽ không thích một lúc nhiều người.",
             "Nếu câu chuyện của chúng ta có một bước chuyển tiếp tích cực, thì QB sẽ là người đầu tiên trong vạn điều đầu tiên.",
@@ -201,6 +220,7 @@ const rarityPools = [
         description: "Messages that explore expectations, values, and the kind of relationship both people may truly want.",
         chance: 2.5,
         messages: [
+            "Từng dòng nhạc trên ghi chú của cô làm tôi bắt đầu ảo tưởng như cái nào cũng đang nhắc về mình.",
             "Giữa 'người đối xử tốt với tất cả mọi người' và 'người chỉ tốt với mỗi mình em' thì QB sẽ muốn đối phương là kiểu người nào hơn?",
             "QB sẽ vì chuyện gì mà chia tay? Hãy nêu ra ba trường hợp có thể dẫn đến kết quả đó.",
             "Điều mà QB ghét nhất trong một mối quan hệ yêu đương là gì?",
@@ -229,6 +249,7 @@ const rarityPools = [
         description: "The rarest messages — vulnerable, honest, and meant for moments when both sides are ready to be real.",
         chance: 0.5,
         messages: [
+            "Mình là một người lắm mơ mộng. Mỗi lúc ngủ đều tạo trong đầu một kịch bản để bản thân có thể ngủ ngon hơn. Gần đây thì kịch bản nào cũng có sự đồng hành của Quí Bình.",
             "Mình đã chuẩn bị sẵn sàng cả rồi, chỉ chờ đến thời điểm thích hợp thì mình muốn gặp em để 'hợp thức hóa' mối quan hệ của tụi mình thôi.",
             "Tự nhiên lại gặp cô này ở thời điểm bản thân chưa có gì trong tay hết, thật sự đáng trách. Xin lỗi yêu dấu của mình nhé.",
             
@@ -363,7 +384,10 @@ function startRoll() {
     placeholder.classList.add("active");
     messageBox.classList.remove("active", "show-message");
 
-    rouletteStatus.textContent = "Rolling the love... the winning rarity is about to appear 🌟";
+    rouletteStatus.innerHTML = `
+        Rolling the love... the winning rarity is about to appear 
+        <img src="/assets/images/icons/star.svg" alt="star" class="star-icon">
+    `;
 
     const effectivePools = getPoolsWithBonus();
     const targetPool = weightedPick(effectivePools);
@@ -410,43 +434,59 @@ function revealResult(pool, message) {
     resultBadge.className = `result-badge rarity-${pool.level}`;
     resultBadge.textContent = `${pool.fullLabel} · ${pool.shortName}`;
 
-    rarityName.textContent = `${pool.shortName}`;
-    rarityDesc.textContent = `${pool.description} Chance: ${pool.chance}%`;
-    
-    const messageData = typeof message === "string"
-        ? { text: message }
-        : message;
+    rarityName.textContent = pool.shortName;
+    rarityDesc.textContent = `${pool.description} • Chance: ${pool.chance}%`;
 
-    if (messageData.quote) {
+    // Reset
+    quoteBox.hidden = true;
+    messageText.innerHTML = "";
+
+    const msg = typeof message === "string" ? { text: message } : message;
+
+    if (msg.type === "document") {
+        // === RENDER FILE ===
+        const filePath = `/${msg.folder || 'documents'}/${msg.filename}`;
+
+        const formattedDesc = (msg.description || pool.description || "")
+            .replace(/\n/g, '<br>');
+
+        messageBox.innerHTML = `
+            <div class="rarity-name">${msg.title || "Tài liệu đặc biệt"}</div>
+            <div class="rarity-desc">${formattedDesc}</div>
+            
+            <a href="${filePath}" target="_blank" class="document-link">
+                <div class="document-card">
+                    <div class="doc-icon">${msg.icon || "📄"}</div>
+                    <div class="doc-info">
+                        <div class="doc-filename">${msg.filename}</div>
+                        <div class="doc-open">Click to open →</div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="message-sign">— from the one who always misses you</div>
+        `;
+    } 
+    else if (msg.quote) {
+        // Quote cũ
         quoteBox.hidden = false;
-        quoteText.textContent = `“${messageData.quote}”`;
-        quoteSource.textContent = messageData.source ? `— ${messageData.source}` : "";
-    } else {
-        quoteBox.hidden = true;
-        quoteText.textContent = "";
-        quoteSource.textContent = "";
+        quoteText.textContent = `“${msg.quote}”`;
+        quoteSource.textContent = msg.source ? `— ${msg.source}` : "";
+        messageText.textContent = msg.text || "";
+    } 
+    else {
+        // Message text bình thường
+        messageText.textContent = msg.text || msg;
     }
 
-    messageText.textContent = messageData.text;
-
     placeholder.classList.remove("active");
-    messageBox.classList.add("active");
-    messageBox.classList.remove("show-message");
-    void messageBox.offsetWidth;
-    messageBox.classList.add("show-message");
+    messageBox.classList.add("active", "show-message");
 
     createBurst(pool.level);
 
+    // Scroll xuống message trên mobile
     if (window.innerWidth <= 980) {
-        setTimeout(() => {
-            const messageCard = document.getElementById("messageCard");
-            if (messageCard) {
-                messageCard.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-            }
-        }, 120);
+        setTimeout(() => document.getElementById("messageCard")?.scrollIntoView({ behavior: "smooth" }), 150);
     }
 }
 
@@ -455,7 +495,11 @@ function hideMessage() {
 
     placeholder.classList.add("active");
     messageBox.classList.remove("active", "show-message");
-    rouletteStatus.textContent = "Ready to roll and receive a sweet message ✨";
+    
+    rouletteStatus.innerHTML = `
+        Ready to roll and receive a sweet message 
+        <img src="/assets/images/icons/sparkle.svg" alt="sparkle" class="sparkle-icon">
+    `;
 }
 
 function createBurst(level) {
