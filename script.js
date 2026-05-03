@@ -386,7 +386,7 @@ function startRoll() {
 
     rouletteStatus.innerHTML = `
         Rolling the love... the winning rarity is about to appear 
-        <img src="/assets/images/icons/star.svg" alt="star" class="star-icon">
+        <img src="assets/images/icons/star.svg" alt="star" class="star-icon">
     `;
 
     const effectivePools = getPoolsWithBonus();
@@ -498,7 +498,7 @@ function hideMessage() {
     
     rouletteStatus.innerHTML = `
         Ready to roll and receive a sweet message 
-        <img src="/assets/images/icons/sparkle.svg" alt="sparkle" class="sparkle-icon">
+        <img src="assets/images/icons/sparkle.svg" alt="sparkle" class="sparkle-icon">
     `;
 }
 
